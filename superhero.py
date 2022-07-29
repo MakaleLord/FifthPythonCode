@@ -37,38 +37,52 @@ pre{
 }
 </style>
 
-<div>
-Avengers
-_ Ant-Man
-_ Black Panther
-_ Captain America
-_ Doctor Strange
-_ Hulk
-_ Iron Man
-_ Spider-Man
+#!/usr/bin/python3
+print("Content-type: text/html \n")
 
-You are  Doctor Strange
+import magicwand
+import random 
 
-------
-Justice League
-_ Aquaman
-_ Bat-man
-_ Cyborg
-_ Flash
-_ Superman
-_ Wonder-woman
+avengers = ["Ant-Man", "Black Panther", "Captain America", "Doctor Strange","Hulk", "Iron Man", "Spider-Man"]
 
-You are  Superman
+print("Avengers")
+for item in avengers:
+    print("_", item)
+print()
 
-------
-Teen Titans
-_ Beast Boy
-_ Raven
-_ Robin
-_ Starfire
-_ Terra
+max_index = len(avengers)-1
+random_index = random.randint(0, max_index)
+print("You are ", avengers[random_index])
+print()
+print("------")
+Justice_League = ["Aquaman", "Bat-man", "Cyborg", "Flash", "Superman", "Wonder-woman"]
 
-You are  Terra
+print("Justice League") 
+for item in Justice_League:
+    print("_", item)
+print()                  
 
-------
-You are  Black Panther
+max_index = len(Justice_League)-1
+random_index = random.randint(0, max_index)
+print("You are ", Justice_League[random_index]) 
+print()
+print("------")
+
+teentitans = ["Beast Boy", "Raven", "Robin", "Starfire", "Terra"]
+
+print("Teen Titans")
+for item in teentitans:
+    print("_", item)
+print()
+
+print("You are ", teentitans[random_index])
+print()
+print("------")
+
+max_index = len(teentitans)-1
+random_index = random.randint(0, max_index)
+
+superhero = avengers + Justice_League + teentitans
+max_index = len(superhero)-1
+random_index = random.randint(0, max_index)
+print("You are ", superhero[random_index])
