@@ -37,35 +37,52 @@ pre{
 }
 </style>
 
-<div>
-Groceries
-_ Pizza Rolls
-_ Chips
-_ Apples
-_ Gatorade
-_ Water
+#!/usr/bin/python3
+print("Content-type: text/html \n")
 
-You got  Chips
+import magicwand
+import random 
 
-------
-Electronics
-_ Charger
-_ MacBook
-_ iPhone
-_ Ethernet Cable
-_ LED Lights
+grocery = ["Pizza Rolls", "Chips", "Apples", "Gatorade", "Water"]
 
-You got  iPhone
+print("Groceries")
+for item in grocery:
+    print("_", item)
+print()
 
-------
-Books
-_ Harry Potter Series
-_ DOAWK Series
-_ Hunger Games Series
-_ The Book Thief
-_ The Outsiders
+max_index = len(grocery)-1
+random_index = random.randint(0, max_index)
+print("You got ", grocery[random_index])
+print()
+print("------")
 
-You got  The Outsiders
+electronics = ["Charger", "MacBook", "iPhone", "Ethernet Cable", "LED Lights"]
 
-------
-You got  Pizza Rolls
+print("Electronics")
+for item in electronics:
+    print("_", item)
+print()
+
+max_index = len(electronics)-1
+random_index = random.randint(0, max_index)
+print("You got ", electronics[random_index])
+print()
+print("------")
+
+books = ["Harry Potter Series", "DOAWK Series", "Hunger Games Series", "The Book Thief", "The Outsiders"]
+
+print("Books")
+for item in books:
+    print("_", item)
+print()
+
+max_index = len(books)-1
+random_index = random.randint(0, max_index)
+print("You got ", books[random_index])
+print()
+print("------")
+
+shopping_list = grocery + electronics + books
+max_index = len(shopping_list)-1
+random_index = random.randint(0, max_index)
+print("You got ", shopping_list[random_index]) 
